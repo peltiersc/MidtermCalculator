@@ -10,7 +10,7 @@ import Foundation
 
 enum Operation: Int {
     case Plus = 0
-    case Minus = 1
+    case Subtract = 1
     case Multiply = 2
-    case Divide = 4
+    case Divide = 3
 }
