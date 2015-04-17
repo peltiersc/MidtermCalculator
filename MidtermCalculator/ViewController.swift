@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func handleClearTap(sender: UIButton) {
     
     }
+    
     @IBAction func handlePlusMinusTap(sender: UIButton) {
     
     }
@@ -30,6 +31,9 @@ class ViewController: UIViewController {
     }
     @IBAction func handleNumericButtonTap(sender: UIButton) {
         
+    }
+    
+    @IBAction func handleEqualsButtonTap(sender: UIButton) {
     }
     
     
