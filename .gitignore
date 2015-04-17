@@ -34,3 +34,5 @@ Carthage/Build
 *.xcuserstate
 
 MidtermCalculator.xcodeproj/project.xcworkspace/xcuserdata/isaacbenham.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xccheckout
