@@ -28,6 +28,9 @@
                                 <state key="normal" title="AC">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleClearTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Rj-E6-szt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-Le-HOQ">
                                 <rect key="frame" x="150" y="150" width="150" height="90"/>
@@ -35,6 +38,9 @@
                                 <state key="normal" title="+ / -">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handlePlusMinusTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j79-ml-QUb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-CI-IDG" userLabel="%">
                                 <rect key="frame" x="300" y="150" width="150" height="90"/>
@@ -42,6 +48,9 @@
                                 <state key="normal" title="%">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handlePercentButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HHq-zm-Wzr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-6g-ONr" userLabel="divide">
                                 <rect key="frame" x="450" y="150" width="150" height="90"/>
@@ -49,6 +58,9 @@
                                 <state key="normal" title="divide">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleOperationButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eth-KG-LZI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-2C-sGj" userLabel="7">
                                 <rect key="frame" x="0.0" y="240" width="150" height="90"/>
@@ -56,6 +68,9 @@
                                 <state key="normal" title="7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fuz-eO-FOe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Uk-z7-eCy" userLabel="8">
                                 <rect key="frame" x="150" y="240" width="150" height="90"/>
@@ -63,6 +78,9 @@
                                 <state key="normal" title="8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wKf-st-XKb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI6-8M-jkK" userLabel="9">
                                 <rect key="frame" x="300" y="240" width="150" height="90"/>
@@ -70,6 +88,9 @@
                                 <state key="normal" title="9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ssd-6o-qLg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfC-6K-qLY" userLabel="multiply">
                                 <rect key="frame" x="450" y="240" width="150" height="90"/>
@@ -77,6 +98,9 @@
                                 <state key="normal" title="multiply">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleOperationButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Olt-Da-h6J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-P4-fCq" userLabel="4">
                                 <rect key="frame" x="0.0" y="330" width="150" height="90"/>
@@ -84,6 +108,9 @@
                                 <state key="normal" title="4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cG7-nZ-9eG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP1-i2-9Dq" userLabel="5">
                                 <rect key="frame" x="150" y="330" width="150" height="90"/>
@@ -91,6 +118,9 @@
                                 <state key="normal" title="5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vk9-gC-FSq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-xN-z7s" userLabel="6">
                                 <rect key="frame" x="300" y="330" width="150" height="90"/>
@@ -98,6 +128,9 @@
                                 <state key="normal" title="6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xbB-kp-DDx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F68-7q-2J4" userLabel="subtract">
                                 <rect key="frame" x="450" y="330" width="150" height="90"/>
@@ -105,6 +138,9 @@
                                 <state key="normal" title="subtract">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleOperationButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ahA-S1-KJT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9H-0u-abm" userLabel="1">
                                 <rect key="frame" x="0.0" y="420" width="150" height="90"/>
@@ -112,6 +148,9 @@
                                 <state key="normal" title="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DrC-I2-SZI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTw-lV-Q84" userLabel="2">
                                 <rect key="frame" x="150" y="420" width="150" height="90"/>
@@ -119,6 +158,9 @@
                                 <state key="normal" title="2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lH2-4n-HJ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-vF-10D" userLabel="3">
                                 <rect key="frame" x="300" y="420" width="150" height="90"/>
@@ -126,6 +168,9 @@
                                 <state key="normal" title="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0br-bn-sYi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enY-I8-tvx">
                                 <rect key="frame" x="450" y="420" width="150" height="90"/>
@@ -133,6 +178,9 @@
                                 <state key="normal" title="add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleOperationButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G7j-UU-gQb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wr-PQ-Jmd" userLabel="0">
                                 <rect key="frame" x="0.0" y="510" width="300" height="90"/>
@@ -140,6 +188,9 @@
                                 <state key="normal" title="0">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bju-J5-g2A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkt-QX-Lru" userLabel="decimal">
                                 <rect key="frame" x="300" y="510" width="150" height="90"/>
@@ -147,6 +198,9 @@
                                 <state key="normal" title=".">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="myg-ed-g1S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hla-Mu-xBD" userLabel="equals">
                                 <rect key="frame" x="450" y="510" width="150" height="90"/>
@@ -154,6 +208,9 @@
                                 <state key="normal" title="equals">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleEqualsButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WsZ-mx-TIt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
