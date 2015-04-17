@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FCE2CE8-9848-401F-9F76-AE4D55D16ED6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MidtermCalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6D1E16AECA6CAADC2777CD7D80212CE142B7093E</key>
+		<string>https://github.com/peltiersc/MidtermCalculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MidtermCalculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6D1E16AECA6CAADC2777CD7D80212CE142B7093E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/peltiersc/MidtermCalculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6D1E16AECA6CAADC2777CD7D80212CE142B7093E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6D1E16AECA6CAADC2777CD7D80212CE142B7093E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MidtermCalculator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

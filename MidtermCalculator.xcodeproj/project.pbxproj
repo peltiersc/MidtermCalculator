@@ -13,6 +13,7 @@
 		32AE62871AE07A5B00EA865F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AE62861AE07A5B00EA865F /* Images.xcassets */; };
 		32AE628A1AE07A5B00EA865F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32AE62881AE07A5B00EA865F /* LaunchScreen.xib */; };
 		32AE62961AE07A5B00EA865F /* MidtermCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE62951AE07A5B00EA865F /* MidtermCalculatorTests.swift */; };
+		36A8F5541AE086BB00D965D9 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8F5531AE086BB00D965D9 /* CalculatorLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		32AE628F1AE07A5B00EA865F /* MidtermCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidtermCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AE62941AE07A5B00EA865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32AE62951AE07A5B00EA865F /* MidtermCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidtermCalculatorTests.swift; sourceTree = "<group>"; };
+		36A8F5531AE086BB00D965D9 /* CalculatorLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				32AE627F1AE07A5B00EA865F /* AppDelegate.swift */,
 				32AE62811AE07A5B00EA865F /* ViewController.swift */,
 				32AE62831AE07A5B00EA865F /* Main.storyboard */,
+				36A8F5531AE086BB00D965D9 /* CalculatorLogic.swift */,
 				32AE62861AE07A5B00EA865F /* Images.xcassets */,
 				32AE62881AE07A5B00EA865F /* LaunchScreen.xib */,
 				32AE627D1AE07A5B00EA865F /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				32AE62821AE07A5B00EA865F /* ViewController.swift in Sources */,
 				32AE62801AE07A5B00EA865F /* AppDelegate.swift in Sources */,
+				36A8F5541AE086BB00D965D9 /* CalculatorLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				32AE629B1AE07A5B00EA865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32AE629C1AE07A5B00EA865F /* Build configuration list for PBXNativeTarget "MidtermCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				32AE629E1AE07A5B00EA865F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
