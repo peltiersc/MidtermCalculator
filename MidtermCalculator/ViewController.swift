@@ -47,11 +47,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updatStringWithInput(input: String) {
-        if currentValue == 0 {
-            inputString = "\(input)"
+    func updateInputValueAndString(input: Int) {
+        if inputValue == nil || inputValue == 0 {
+            inputValue = Float(input)
+            inputString = "\(inputValue)"
         } else {
             inputString += "\(input)"
+            let intify = inputString.toInt()!
+            inputValue = Float(intify)
         }
     }
 
