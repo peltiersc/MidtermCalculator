@@ -13,10 +13,18 @@ class ViewController: UIViewController {
     var inputString = "0"
     var currentOperation:Operation? = nil
     var currentValue:Float = 0
-    var inputValue:Float? = nil
+    var inputValue:Float = 0
+    var clearFlag = false
+    var decimalFlag = false
+    var decimalCount:Int = 0
     
     @IBAction func handleClearTap(sender: UIButton) {
-    
+        if clearFlag {
+            inputValue = 0
+            currentValue = 0
+        } else {
+            inputValue = 0
+        }
     }
     
     @IBAction func handlePlusMinusTap(sender: UIButton) {
@@ -27,6 +35,7 @@ class ViewController: UIViewController {
     }
     @IBAction func handleOperationButtonTap(sender: UIButton) {
         currentOperation = Operation(rawValue: sender.tag)
+        currentValue = inputValue
         sender.layer.borderWidth = 5
     }
     @IBAction func handleNumericButtonTap(sender: UIButton) {
@@ -48,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     func updateInputValueAndString(input: Int) {
-        if inputValue == nil || inputValue == 0 {
+        if inputValue == 0 {
             inputValue = Float(input)
             inputString = "\(inputValue)"
         } else {
