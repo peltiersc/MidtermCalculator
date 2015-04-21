@@ -9,22 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    typealias Node = (Operation, Float)
     
     var inputString = "0"
-    var currentOperation:Operation? = nil
-    var currentValue:Float = 0
-    var inputValue:Float? = 0
+    var currentOperation:Operation?
+    var currentValue:Float?
+    var inputValue:Float?
     var clearFlag = false
     var decimalFlag = false
+    var honorOoO = false
     var decimalCount:Int = 0
+    var operationQueue = [Node]()
     
     @IBAction func handleClearTap(sender: UIButton) {
         if clearFlag {
-            inputValue = 0
+            inputValue = nil
             currentValue = 0
         } else {
-            inputValue = 0
+            inputValue = nil
         }
+        
+        clearFlag = !clearFlag
     }
     
     @IBAction func handlePlusMinusTap(sender: UIButton) {
@@ -34,18 +39,34 @@ class ViewController: UIViewController {
     
     }
     @IBAction func handleOperationButtonTap(sender: UIButton) {
-        currentOperation = Operation(rawValue: sender.tag)
-        if (inputValue != nil) {
-            currentValue = inputValue!
-            inputValue = nil
+        let newOp = Operation(rawValue: sender.tag)!
+        if currentOperation != nil {
+            if inputValue != nil {
+                operationQueue.append((currentOperation!, inputValue!))
+               
+            }
+        } else {
+            if currentValue == nil {
+                self.currentFromInput()
+            }
         }
-        sender.layer.borderWidth = 5
+        
+        self.resolveQueue()
+        
+        currentOperation = newOp
+        inputValue = nil
+        
+        sender.layer.borderWidth = 2
     }
     @IBAction func handleNumericButtonTap(sender: UIButton) {
-        
+        self.updateInputValueAndString(sender.tag)
     }
     
     @IBAction func handleEqualsButtonTap(sender: UIButton) {
+        if currentOperation != nil && inputValue != nil {
+            operationQueue.append((currentOperation!, inputValue!))
+        }
+        self.evaluateCurrentExpression()
     }
     
     
@@ -62,14 +83,39 @@ class ViewController: UIViewController {
     func updateInputValueAndString(input: Int) {
         if inputValue == 0 || inputValue == nil {
             inputValue = Float(input)
-            inputString = "\(inputValue)"
+            inputString = "\(input)"
         } else {
             inputString += "\(input)"
             let intify = inputString.toInt()!
             inputValue = Float(intify)
         }
     }
+    
+    func evaluateCurrentExpression() {
+        currentValue = walkTree(operationQueue, currentValue!)
+        inputString = "\(currentValue)"
+        println("\(currentValue)")
+        self.clearCurrentAndQueue()
+    }
+    
+    func resolveQueue() {
+        if !honorOoO {
+            if operationQueue.isEmpty == false {
+                 self.evaluateCurrentExpression()
+            }
+        }
+    }
+    
+    func clearCurrentAndQueue() {
+        currentOperation = nil
+        inputValue = nil
+        operationQueue = [Node]()
+    }
 
-
+    func currentFromInput() {
+        if currentValue == nil {
+            currentValue = inputValue
+        }
+    }
 }
 
