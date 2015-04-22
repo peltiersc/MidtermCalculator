@@ -20,22 +20,50 @@ class ViewController: UIViewController {
     var honorOoO = false
     var decimalCount:Int = 0
     var operationQueue = [Node]()
+    var buttons: [UIButton]!
+
+    @IBOutlet weak var add: UIButton!
+    @IBOutlet weak var subtract: UIButton!
+    @IBOutlet weak var multiply: UIButton!
+    @IBOutlet weak var divide: UIButton!
+    @IBOutlet weak var displayField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        displayField.text = inputString
+        displayField.userInteractionEnabled = false
+        buttons = [add, subtract, multiply, divide]
+        updateButtonBorders()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+        
     @IBAction func handleClearTap(sender: UIButton) {
         if clearFlag {
-            inputValue = nil
-            currentValue = nil
-            clearFlag = false
-            inputString = "0"
+            clearAll()
         } else {
             inputValue = nil
             inputString = "0"
             clearFlag = true
+            updateInterface()
         }
         
         
     }
     
+    @IBAction func toggleHonnorOoO(sender: UIButton) {
+        if honorOoO {
+            honorOoO = false
+            sender.titleLabel!.text = "Off"
+        } else {
+            honorOoO = true
+            sender.titleLabel!.text = "On"
+        }
+        clearAll()
+    }
     @IBAction func handleDecimalButtonTap(sender: UIButton) {
         decimalFlag = true
         if decimalCount == 0 {
@@ -84,7 +112,7 @@ class ViewController: UIViewController {
         
         currentOperation = newOp
         inputValue = nil
-        
+        updateButtonBorders()
         sender.layer.borderWidth = 2
     }
     @IBAction func handleNumericButtonTap(sender: UIButton) {
@@ -99,28 +127,17 @@ class ViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func updateInputValueAndString(input: Int) {
-        println("update called")
         if inputValue == 0 || inputValue == nil {
             inputValue = Float(input)
             inputString = "\(input)"
-            println("inputVal: \(inputValue)")
         } else {
             self.formatInputString("\(input)")
             self.formatInputValue()
-            println("inputString: \(inputString)")
-            println("inputVal: \(inputValue)")
+           
         }
+        
+        updateInterface()
     }
     
     func evaluateCurrentExpression() {
@@ -129,8 +146,8 @@ class ViewController: UIViewController {
         }
         
         currentValue = walkTree(operationQueue, currentValue!)
-        inputString = "\(currentValue)"
-        println("\(currentValue)")
+        inputString = "\(currentValue!)"
+        updateInterface()
         self.clearCurrentAndQueue()
     }
     
@@ -148,6 +165,7 @@ class ViewController: UIViewController {
         operationQueue = [Node]()
         decimalCount = 0
         decimalFlag = false
+        updateButtonBorders()
     }
 
     func currentFromInput() {
@@ -178,18 +196,36 @@ class ViewController: UIViewController {
     
     func currentValueIsDisplayed() -> Bool {
         if currentValue != nil {
-            let cvString =  "\(currentValue)"
+            let cvString =  "\(currentValue!)"
             return cvString == inputString
         }
         return false
     }
     
     func updateDisplayWithCurrent() {
-        inputString = "\(currentValue)"
+        inputString = "\(currentValue!)"
     }
     
     func updateDisplayWithInput(){
-        inputString = "\(inputValue)"
+        inputString = "\(inputValue!)"
+    }
+    
+    func updateInterface(){
+        displayField.text = inputString
+    }
+    
+    func clearAll() {
+        clearCurrentAndQueue()
+        currentValue = nil
+        clearFlag = false
+        inputString = "0"
+        updateInterface()
+    }
+    
+    func updateButtonBorders (){
+        for button in buttons {
+            button.layer.borderWidth = 0
+        }
     }
 }
 
