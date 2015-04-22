@@ -20,7 +20,37 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-Mb-Fng" userLabel="DisplayContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSZ-5T-ZF6">
+                                        <rect key="frame" x="10" y="20" width="40" height="30"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="e37-wS-wQl"/>
+                                            <constraint firstAttribute="height" constant="30" id="jTc-xx-DXt"/>
+                                        </constraints>
+                                        <state key="normal" title="Off">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleHonnorOoO:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xxW-sj-z0I"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-3j-wOO">
+                                        <rect key="frame" x="252" y="60" width="333" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="333" id="rPY-xv-Ge8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZSZ-5T-ZF6" firstAttribute="leading" secondItem="oeN-Mb-Fng" secondAttribute="leading" constant="10" id="EUe-DW-Xtc"/>
+                                    <constraint firstAttribute="centerY" secondItem="PVa-3j-wOO" secondAttribute="centerY" id="OB5-Sg-ulc"/>
+                                    <constraint firstItem="ZSZ-5T-ZF6" firstAttribute="top" secondItem="oeN-Mb-Fng" secondAttribute="top" constant="20" id="Y06-Xj-8iX"/>
+                                    <constraint firstAttribute="trailing" secondItem="PVa-3j-wOO" secondAttribute="trailing" constant="15" id="bEI-aQ-tnw"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-9Z-dWG">
                                 <rect key="frame" x="0.0" y="150" width="150" height="90"/>
@@ -329,6 +359,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="add" destination="enY-I8-tvx" id="9G4-oW-KFu"/>
+                        <outlet property="displayField" destination="PVa-3j-wOO" id="hdx-zs-HfS"/>
+                        <outlet property="divide" destination="ixR-6g-ONr" id="H7H-TC-5vs"/>
+                        <outlet property="multiply" destination="GfC-6K-qLY" id="Fwc-XJ-OXC"/>
+                        <outlet property="subtract" destination="F68-7q-2J4" id="Zkj-3y-mQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
