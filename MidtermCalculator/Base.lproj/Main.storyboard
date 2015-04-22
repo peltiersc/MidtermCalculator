@@ -189,7 +189,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleNumericButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="myg-ed-g1S"/>
+                                    <action selector="handleDecimalButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oBU-eD-HY2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hla-Mu-xBD" userLabel="equals">
