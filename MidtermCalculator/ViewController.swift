@@ -57,10 +57,10 @@ class ViewController: UIViewController {
     @IBAction func toggleHonnorOoO(sender: UIButton) {
         if honorOoO {
             honorOoO = false
-            sender.titleLabel!.text = "Off"
+            sender.setTitle("Off", forState: .Normal)
         } else {
             honorOoO = true
-            sender.titleLabel!.text = "On"
+            sender.setTitle("On", forState: .Normal)
         }
         clearAll()
     }
@@ -204,10 +204,12 @@ class ViewController: UIViewController {
     
     func updateDisplayWithCurrent() {
         inputString = "\(currentValue!)"
+        updateInterface()
     }
     
     func updateDisplayWithInput(){
         inputString = "\(inputValue!)"
+        updateInterface()
     }
     
     func updateInterface(){
